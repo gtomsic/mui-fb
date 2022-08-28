@@ -11,9 +11,9 @@ import {
   IconButton,
   Typography,
 } from '@mui/material'
-const Post = () => {
+const Post = ({ image }) => {
   return (
-    <Card sx={{ margin: 3 }}>
+    <Card sx={{ marginBottom: 3 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: 'red' }} aria-label='recipe'>
@@ -28,12 +28,7 @@ const Post = () => {
         title='Shrimp and Chorizo Paella'
         subheader='September 14, 2016'
       />
-      <CardMedia
-        component='img'
-        height='20%'
-        image='https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?cs=srgb&dl=pexels-stefan-stefancik-91227.jpg&fm=jpg'
-        alt='Paella dish'
-      />
+      <CardMedia component='img' height='20%' image={image} alt='Paella dish' />
       <CardContent>
         <Typography variant='body2' color='text.secondary'>
           This impressive paella is a perfect party dish and a fun meal to cook

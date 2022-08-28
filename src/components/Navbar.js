@@ -44,7 +44,7 @@ const UserBox = styled(Box)(({ theme }) => ({
 }))
 
 const Navbar = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null)
+  const [anchorEl, setAnchorEl] = useState(null)
   const open = Boolean(anchorEl)
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
@@ -57,10 +57,10 @@ const Navbar = () => {
     <AppBar position='sticky'>
       <StyledToolbar>
         <Typography variant='h6' sx={{ display: { xs: 'none', sm: 'block' } }}>
-          MUI Facbook
+          MUI Facebook
         </Typography>
         <Pets sx={{ display: { xs: 'block', sm: 'none' } }} />
-        <Search>
+        <Search bgcolor={'background.default'} color={'text.primary'}>
           <InputBase placeholder='Search' />
         </Search>
         <Icons>
